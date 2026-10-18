@@ -1,5 +1,5 @@
 import { RobotoMono_400Regular, RobotoMono_500Medium } from '@expo-google-fonts/roboto-mono';
-import { RubikMonoOne_400Regular } from '@expo-google-fonts/rubik-mono-one';
+import { PassionOne_900Black } from '@expo-google-fonts/passion-one';
 import { useFonts } from 'expo-font';
 import * as Notifications from 'expo-notifications';
 import { Stack, router } from 'expo-router';
@@ -23,7 +23,7 @@ Notifications.setNotificationHandler({
 });
 
 export default function RootLayout() {
-  const [fontsLoaded, fontError] = useFonts({ RubikMonoOne_400Regular, RobotoMono_400Regular, RobotoMono_500Medium });
+  const [fontsLoaded, fontError] = useFonts({ PassionOne_900Black, RobotoMono_400Regular, RobotoMono_500Medium });
   // Never sit on a blank screen waiting for fonts: fall back to system fonts.
   const [gaveUp, setGaveUp] = useState(false);
   useEffect(() => {

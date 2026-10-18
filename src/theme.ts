@@ -9,7 +9,7 @@ export const colors = {
 };
 
 export const fonts = {
-  display: 'RubikMonoOne_400Regular',
+  display: 'PassionOne_900Black',
   mono: 'RobotoMono_400Regular',
   monoMedium: 'RobotoMono_500Medium',
 };

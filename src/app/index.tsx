@@ -17,7 +17,7 @@ export default function Home() {
         style={[styles.ring, { width: ringW, height: ringW * (1560 / 2385) }]}
         resizeMode="contain"
       />
-      <Title size={72} subtitle="Fuel your focus">
+      <Title size={92} subtitle="Fuel your focus">
         GRIND
       </Title>
       <View style={styles.buttons}>

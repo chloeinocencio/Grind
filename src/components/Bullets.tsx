@@ -54,6 +54,6 @@ const styles = StyleSheet.create({
   row: { flexDirection: 'row', alignItems: 'center', height: 34 },
   dotHit: { width: 28, height: 28, alignItems: 'center', justifyContent: 'center', marginRight: 6 },
   dot: { width: 8, height: 8, borderRadius: 4, backgroundColor: colors.ink },
-  input: { flex: 1, fontFamily: fonts.mono, fontSize: 17, color: colors.ink, paddingVertical: 4 },
+  input: { flex: 1, fontFamily: fonts.mono, fontSize: 16, color: colors.ink, paddingVertical: 4 },
   done: { textDecorationLine: 'line-through', color: '#9C9490' },
 });

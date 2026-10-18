@@ -87,7 +87,7 @@ export default function Pomodoro() {
   return (
     <View style={[styles.root, { paddingTop: insets.top + 36, paddingBottom: insets.bottom + 40 }]}>
       <BackButton />
-      <Title size={64} subtitle="The Pomodoro Technique">
+      <Title size={92} subtitle="The Pomodoro Technique">
         TIMER
       </Title>
 
@@ -127,10 +127,10 @@ export default function Pomodoro() {
 const styles = StyleSheet.create({
   root: { flex: 1, backgroundColor: colors.white },
   mainBtn: { alignSelf: 'center', marginTop: 64 },
-  main: { fontFamily: fonts.monoMedium, fontSize: 40, color: colors.ink },
+  main: { fontFamily: fonts.mono, fontSize: 26, color: colors.ink },
   center: { flex: 1, alignItems: 'center', justifyContent: 'center' },
   bottom: { alignItems: 'center', minHeight: 90, gap: 4 },
   phase: { fontFamily: fonts.mono, fontSize: 13, color: colors.ink, opacity: 0.5, letterSpacing: 2 },
-  clock: { fontFamily: fonts.mono, fontSize: 24, color: colors.ink },
+  clock: { fontFamily: fonts.mono, fontSize: 17, color: colors.ink },
   link: { fontFamily: fonts.mono, fontSize: 14, color: colors.ink, opacity: 0.55, textDecorationLine: 'underline' },
 });

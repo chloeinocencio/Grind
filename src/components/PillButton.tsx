@@ -37,5 +37,5 @@ const styles = StyleSheet.create({
     borderTopWidth: 1.5,
     borderTopColor: '#FFFFFF',
   },
-  label: { fontFamily: fonts.mono, fontSize: 20, color: colors.ink },
+  label: { fontFamily: fonts.mono, fontSize: 16, color: colors.ink },
 });

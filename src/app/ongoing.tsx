@@ -9,7 +9,7 @@ export default function Ongoing() {
       kind="ongoing"
       header={
         <View>
-          <Title size={60}>ONGOING</Title>
+          <Title size={86}>ONGOING</Title>
           <Image
             source={require('../../assets/art/matcha-script.png')}
             style={styles.script}
