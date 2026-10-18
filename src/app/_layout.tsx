@@ -5,7 +5,7 @@ import * as Notifications from 'expo-notifications';
 import { Stack, router } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
 import { StatusBar } from 'expo-status-bar';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { AppState, Platform } from 'react-native';
 import { onListsChanged } from '@/lib/lists';
 import { syncReminders } from '@/lib/reminders';
@@ -22,7 +22,14 @@ Notifications.setNotificationHandler({
 });
 
 export default function RootLayout() {
-  const [loaded] = useFonts({ RubikMonoOne_400Regular, RobotoMono_400Regular, RobotoMono_500Medium });
+  const [fontsLoaded, fontError] = useFonts({ RubikMonoOne_400Regular, RobotoMono_400Regular, RobotoMono_500Medium });
+  // Never sit on a blank screen waiting for fonts: fall back to system fonts.
+  const [gaveUp, setGaveUp] = useState(false);
+  useEffect(() => {
+    const t = setTimeout(() => setGaveUp(true), 3000);
+    return () => clearTimeout(t);
+  }, []);
+  const loaded = fontsLoaded || !!fontError || gaveUp;
 
   useEffect(() => {
     if (loaded) SplashScreen.hideAsync().catch(() => {});
