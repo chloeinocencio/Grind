@@ -7,6 +7,7 @@ import * as SplashScreen from 'expo-splash-screen';
 import { StatusBar } from 'expo-status-bar';
 import { useEffect, useState } from 'react';
 import { AppState, Platform } from 'react-native';
+import { Intro } from '@/components/Intro';
 import { onListsChanged } from '@/lib/lists';
 import { syncReminders } from '@/lib/reminders';
 
@@ -63,12 +64,15 @@ export default function RootLayout() {
     };
   }, []);
 
+  const [introDone, setIntroDone] = useState(false);
+
   if (!loaded) return null;
 
   return (
     <>
-      <StatusBar style="dark" />
+      <StatusBar style={introDone ? 'dark' : 'light'} />
       <Stack screenOptions={{ headerShown: false, animation: 'slide_from_right' }} />
+      {!introDone && <Intro onDone={() => setIntroDone(true)} />}
     </>
   );
 }
